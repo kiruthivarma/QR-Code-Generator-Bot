@@ -18,9 +18,9 @@ def qr_code_handler(message):
 
 def qrcode(message):
     url=pyqrcode.create(message.text)
-    url.png('generated code.png',scale=15)
+    url.png('QR Code.png',scale=15)
     bot.send_chat_action(message.chat.id, 'upload_document')
-    bot.send_document(message.chat.id,open('generated code.png','rb' ))
+    bot.send_document(message.chat.id,open('QR Code.png','rb' ))
 
 while True:
 	try:
